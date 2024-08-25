@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Primary Colors -->
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <!-- Secondary Colors -->
+    <color name="colorSecondary">#03A9F4</color>
+    <color name="colorSecondaryDark">#0288D1</color>
+    <color name="colorSecondaryLight">#B3E5FC</color>
+
+    <!-- Text Colors -->
+    <color name="textColorDark">#121212</color>
+    <color name="textColorPrimary">#212121</color>
+    <color name="textColorSecondary">#757575</color>
+    <color name="textColorOnPrimary">#FFFFFF</color>
+    <color name="textColorOnSecondary">#FFFFFF</color>
+
+    <!-- Background Colors -->
+    <color name="backgroundColorLight">#FFFFFF</color>
+    <color name="backgroundColorGray">#F5F5F5</color>
+
+    <!-- Error Colors -->
+    <color name="colorError">#B00020</color>
+    <color name="colorOnError">#FFFFFF</color>
+
+    <!-- Success Colors -->
+    <color name="colorSuccess">#4CAF50</color>
+    <color name="colorOnSuccess">#FFFFFF</color>
+
+    <!-- Warning Colors -->
+    <color name="colorWarning">#FFEB3B</color>
+    <color name="colorOnWarning">#000000</color>
+
+    <!-- Information Colors -->
+    <color name="colorInfo">#2196F3</color>
+    <color name="colorOnInfo">#FFFFFF</color>
+
+    <!-- Custom Palette -->
+    <color name="customColor1">#FFC107</color>
+    <color name="customColor2">#8BC34A</color>
+    <color name="customColor3">#FF5722</color>
+    <color name="customColor4">#795548</color>
+    <color name="customColor5">#607D8B</color>
+
+    <!-- Grayscale Colors -->
+    <color name="gray50">#FAFAFA</color>
+    <color name="gray100">#F5F5F5</color>
+    <color name="gray200">#EEEEEE</color>
+    <color name="gray300">#E0E0E0</color>
+    <color name="gray400">#BDBDBD</color>
+    <color name="gray500">#9E9E9E</color>
+    <color name="gray600">#757575</color>
+    <color name="gray700">#616161</color>
+    <color name="gray800">#424242</color>
+    <color name="gray900">#212121</color>
+
+    <!-- Transparency Colors -->
+    <color name="transparent">#00000000</color>
+    <color name="semiTransparent">#80000000</color>
+    <color name="semiTransparentWhite">#80FFFFFF</color>
+
+    <!-- Muted Colors -->
+    <color name="mutedRed">#D32F2F</color>
+    <color name="mutedOrange">#F57C00</color>
+    <color name="mutedYellow">#FBC02D</color>
+    <color name="mutedGreen">#388E3C</color>
+    <color name="mutedTeal">#00796B</color>
+    <color name="mutedBlue">#1976D2</color>
+    <color name="mutedIndigo">#303F9F</color>
+    <color name="mutedPurple">#7B1FA2</color>
+    <color name="mutedPink">#C2185B</color>
+    <color name="mutedBrown">#5D4037</color>
+
+    <!-- Muted Pastel Colors -->
+    <color name="mutedPastelPink">#F8BBD0</color>
+    <color name="mutedPastelBlue">#BBDEFB</color>
+    <color name="mutedPastelGreen">#C8E6C9</color>
+    <color name="mutedPastelYellow">#FFF9C4</color>
+    <color name="mutedPastelPurple">#E1BEE7</color>
+    <color name="mutedPastelOrange">#FFE0B2</color>
+
+    <!-- Muted Earth Tones -->
+    <color name="mutedSand">#D7CCC8</color>
+    <color name="mutedClay">#8D6E63</color>
+    <color name="mutedOlive">#827717</color>
+    <color name="mutedForestGreen">#2E7D32</color>
+    <color name="mutedStone">#616161</color>
+</resources>

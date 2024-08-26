@@ -27,6 +27,7 @@ navigationFragmentKtxVersion = "2.7.5"
 navigationUiKtx = "2.7.5"
 playServicesAuth = "21.2.0"
 activity = "1.9.1"
+legacySupportV4 = "1.0.0"
 
 [libraries]
 androidx-appcompat-v161 = { module = "androidx.appcompat:appcompat", version.ref = "appcompatVersion" }
@@ -60,6 +61,7 @@ material = { group = "com.google.android.material", name = "material", version.r
 material-v1100 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
 play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

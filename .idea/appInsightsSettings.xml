@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.jones.myquiz" />
+                  <option name="mobileSdkAppId" value="1:795273988447:android:a512e9381d48a7f3874eea" />
+                  <option name="projectId" value="myquiz-c8593" />
+                  <option name="projectNumber" value="795273988447" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

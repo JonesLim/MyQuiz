@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.jones.myquiz.R
@@ -18,6 +18,7 @@ import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
+
     override val viewModel: RegisterViewModelImpl by viewModels()
 
     override fun onCreateView(
@@ -29,18 +30,15 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
         return binding.root
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val roleOptions = resources.getStringArray(R.array.roles_array)
-        val autoCompleteAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_dropdown_item_1line, roleOptions)
+        val roles = resources.getStringArray(R.array.roles_array)
+        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_dropdown_item_1line, roles)
 
-        binding.atvRole.setAdapter(autoCompleteAdapter)
-
-        binding.atvRole.setOnItemClickListener { _, _, position, _ ->
-            val selectedRole = roleOptions[position]
-            // Now, you can use the selectedRole in your registration process
+        binding.atvRole.setAdapter(adapter)
+        binding.atvRole.setOnClickListener {
+            binding.atvRole.showDropDown()
         }
 
         setupUiComponents(view)
@@ -50,21 +48,28 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
     override fun setupUiComponents(view: View) {
         super.setupUiComponents(view)
 
-        binding.run {
-            btnRegister.setOnClickListener {
-                viewModel.register(
-                    etName.text.toString(),
-                    etEmail.text.toString(),
-                    etPassword.text.toString(),
-                    etConfirmPass.text.toString(),
-                    atvRole.text.toString()
-                )
-            }
+        binding.btnRegister.setOnClickListener {
+            val name = binding.etName.text.toString().trim()
+            val email = binding.etEmail.text.toString().trim()
+            val password = binding.etPassword.text.toString().trim()
+            val confirmPass = binding.etConfirmPass.text.toString().trim()
+            val role = binding.atvRole.text.toString().trim()
 
-            tvLogin.setOnClickListener {
-                navController.popBackStack()
+            when {
+                name.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPass.isEmpty() || role.isEmpty() -> {
+                    showSnackbar(view, "All fields are required!", isError = true)
+                }
+                password != confirmPass -> {
+                    showSnackbar(view, "Passwords do not match!", isError = true)
+                }
+                else -> {
+                    viewModel.register(name, email, password, confirmPass, role)
+                }
             }
+        }
 
+        binding.tvLogin.setOnClickListener {
+            navController.popBackStack()
         }
     }
 
@@ -72,10 +77,15 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
         super.setupViewModelObserver(view)
         lifecycleScope.launch {
             viewModel.success.collect {
-                val action = RegisterFragmentDirections.actionRegisterFragmentToLoginFragment()
+                val action = RegisterFragmentDirections.registerToLogin()
                 navController.navigate(action)
             }
         }
-    }
 
+        lifecycleScope.launch {
+            viewModel.error.collect {
+                showSnackbar(view, it, isError = true)
+            }
+        }
+    }
 }

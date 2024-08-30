@@ -1,33 +1,37 @@
 [versions]
-agp = "8.5.1"
-androidxJunit = "1.1.5"
-appcompatVersion = "1.6.1"
+agp = "8.5.2"
+androidxJunit = "1.2.1"
+appcompatVersion = "1.7.0"
 constraintlayout = "2.1.4"
-coreKtxVersion = "1.12.0"
-espressoCoreVersion = "3.5.1"
+coreKtxVersion = "1.13.1"
+espressoCoreVersion = "3.6.1"
+firebaseAppcheckPlayintegrity = "18.0.0"
 firebaseAuth = "23.0.0"
 firebaseFirestore = "25.1.0"
 firebaseStorage = "21.0.0"
 fragmentKtx = "1.8.2"
 glide = "4.16.0"
+googleMaterial = "1.12.0"
 googleServices = "4.4.2"
 hiltAndroid = "2.51.1"
-hiltAndroidCompiler = "2.48.1"
-kotlin = "1.9.0"
+hiltAndroidCompiler = "2.51.1"
+kotlin = "1.9.24"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 appcompat = "1.7.0"
 lifecycleLivedataKtx = "2.8.4"
+lottie = "6.5.0"
 material = "1.12.0"
-materialVersion = "1.10.0"
+materialVersion = "1.12.0"
 navigationFragmentKtx = "2.7.7"
-navigationFragmentKtxVersion = "2.7.5"
-navigationUiKtx = "2.7.5"
+navigationFragmentKtxVersion = "2.7.7"
+navigationUiKtx = "2.7.7"
 playServicesAuth = "21.2.0"
 activity = "1.9.1"
 legacySupportV4 = "1.0.0"
+transition = "1.5.1"
 
 [libraries]
 androidx-appcompat-v161 = { module = "androidx.appcompat:appcompat", version.ref = "appcompatVersion" }
@@ -45,6 +49,8 @@ androidx-navigation-fragment-ktx-v275 = { module = "androidx.navigation:navigati
 androidx-navigation-safe-args-gradle-plugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigationFragmentKtxVersion" }
 androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigationFragmentKtx" }
 androidx-navigation-ui-ktx-v275 = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigationUiKtx" }
+androidx-transition = { module = "androidx.transition:transition", version.ref = "transition" }
+firebase-appcheck-playintegrity = { module = "com.google.firebase:firebase-appcheck-playintegrity", version.ref = "firebaseAppcheckPlayintegrity" }
 firebase-auth = { module = "com.google.firebase:firebase-auth", version.ref = "firebaseAuth" }
 firebase-firestore = { module = "com.google.firebase:firebase-firestore", version.ref = "firebaseFirestore" }
 firebase-storage = { module = "com.google.firebase:firebase-storage", version.ref = "firebaseStorage" }
@@ -53,12 +59,15 @@ google-services = { module = "com.google.gms:google-services", version.ref = "go
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroid" }
 hilt-android-compiler-v2481 = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroidCompiler" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltAndroid" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 material-v1100 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
+material-v170 = { module = "com.google.android.material:material", version.ref = "googleMaterial" }
 play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }

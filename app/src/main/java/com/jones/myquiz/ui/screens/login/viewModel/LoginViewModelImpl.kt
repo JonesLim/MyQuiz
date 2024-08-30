@@ -32,7 +32,7 @@ class LoginViewModelImpl @Inject constructor(
             }
             if (result != null) {
 //                getCurrentUser()
-                _success.emit("Login Successful")
+                _success.emit("Login Successfully!")
             }
         }
     }

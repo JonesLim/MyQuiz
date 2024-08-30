@@ -1,5 +1,6 @@
 package com.jones.myquiz.data.repo
 
+import android.util.Log
 import com.jones.myquiz.core.service.AuthService
 import com.jones.myquiz.data.model.User
 import com.google.firebase.firestore.CollectionReference
@@ -10,7 +11,7 @@ import kotlinx.coroutines.tasks.await
 class UserRepoImpl(
     private val authService: AuthService,
     private val db: FirebaseFirestore = FirebaseFirestore.getInstance()
-): UserRepo {
+) : UserRepo {
 
     private fun getDbRef(): CollectionReference {
         return db.collection("users")
@@ -26,20 +27,29 @@ class UserRepoImpl(
     }
 
     override suspend fun getUser(uid: String): User? {
-        val doc = getDbRef().document(getUid()).get().await()
+        val doc = getDbRef().document(uid).get().await()
         return doc.data?.let {
-            it["id"] = getUid()
+            it["id"] = uid
             User.fromHashMap(it)
         }
     }
 
-
     override suspend fun removeUser() {
-        getDbRef()
+        getDbRef().document(getUid()).delete().await()
     }
 
     override suspend fun updateUser(user: User) {
-        getDbRef().document(getUid()).set(user.toHashMap())
+        getDbRef().document(getUid()).set(user.toHashMap()).await()
+    }
+
+    override suspend fun getUserRole(uid: String): String? {
+        return try {
+            val doc = getDbRef().document(uid).get().await()
+            doc.data?.get("role") as? String
+        } catch (e: Exception) {
+            Log.e("UserRepo", "Error fetching user role", e)
+            null // Return null if there's an error
+        }
     }
 
 

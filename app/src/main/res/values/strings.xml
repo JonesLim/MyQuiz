@@ -12,9 +12,10 @@
     <string name="delete">Delete</string>
     <string name="already_have_an_account">Already have an Account?</string>
     <string name="edit_profile_pic">Edit Profile Pic</string>
-    <string name="username">Name: POtaTo_SLaYer</string>
+    <!--    <string name="username">Name: POtaTo_SLaYer</string>-->
+    <string name="username">Username</string>
     <string name="email_profile">Email: Im dead</string>
-    <string name="logout">Logout</string>
+    <string name="logout">LogOut</string>
     <string name="title">Title</string>
     <string name="description">Description</string>
     <string name="created_at">Created At</string>
@@ -25,6 +26,18 @@
     <string name="sign_in_to_continue">Sign in to continue.</string>
     <string name="app_icon">App Icon</string>
     <string name="re_type_password">Re-Type Password</string>
+    <string name="your_score">Your Score</string>
+    <string name="finish">Finish</string>
+    <string name="score">Score</string>
+    <string name="quizid">QuizId</string>
+    <string name="_00_00">00:00</string>
+    <string name="join_a_quiz">Join a Quiz</string>
+    <string name="create_new_quiz">Create New Quiz</string>
+    <string name="quiz_title">Quiz Title</string>
+    <string name="created_by">Created By</string>
+    <string name="back">Back</string>
+    <string name="dialog_icon_desc">Dialog Logout Confirmation</string>
+    <string name="are_you_sure_you_want_to_logout">Are you sure you want to log out?</string>
 
     <string-array name="roles_array">
         <item>Teacher</item>

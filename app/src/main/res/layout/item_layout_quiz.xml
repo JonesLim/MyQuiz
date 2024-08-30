@@ -1,0 +1,61 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@android:color/transparent">  <!-- Transparent card background -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">  <!-- Transparent RelativeLayout background -->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dimen_quiz"
+            android:background="@android:color/transparent"/>  <!-- Transparent ImageView background -->
+
+        <LinearLayout
+            android:id="@+id/llTodo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@android:color/transparent">  <!-- Transparent LinearLayout background -->
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvQuizId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/quizid"
+                android:textStyle="bold"
+                style="@style/TextAppearance.Material3.TitleLarge" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/quiz_title"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                style="@style/TextAppearance.Material3.BodyLarge" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvCreatedBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/created_by"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                style="@style/TextAppearance.Material3.BodyLarge" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/dialogIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:src="@drawable/warning"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/dialog_icon_desc"
+        app:tint="@color/mutedYellow" />
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/logout"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/dialogMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/are_you_sure_you_want_to_logout"
+        android:layout_marginTop="8dp"
+        android:textStyle="italic"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

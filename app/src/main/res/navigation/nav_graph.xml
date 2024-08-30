@@ -5,23 +5,163 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/loginFragment">
 
+    <!-- Actions -->
+    <action
+        android:id="@+id/login_to_register"
+        app:popUpTo="@id/loginFragment"
+        app:popUpToInclusive="true"
+        app:destination="@id/registerFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
 
+    <action
+        android:id="@+id/teacher_dash_to_add_quiz"
+        app:popUpTo="@id/teacherDashFragment"
+        app:popUpToInclusive="true"
+        app:destination="@+id/addQuizFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/add_quiz_to_teacher_dash"
+        app:popUpTo="@id/addQuizFragment"
+        app:popUpToInclusive="true"
+        app:destination="@+id/teacherDashFragment"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left" />
+
+    <action
+        android:id="@+id/register_to_login"
+        app:popUpTo="@id/registerFragment"
+        app:popUpToInclusive="true"
+        app:destination="@id/loginFragment"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/quiz_to_dash"
+        app:popUpTo="@id/quizFragment"
+        app:popUpToInclusive="true"
+        app:destination="@+id/studentDashFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/join_quiz_to_quiz"
+        app:popUpTo="@id/joinQuizFragment"
+        app:popUpToInclusive="true"
+        app:destination="@+id/quizFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/student_dash_to_join_quiz"
+        app:popUpTo="@id/studentDashFragment"
+        app:popUpToInclusive="true"
+        app:destination="@id/joinQuizFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/login_to_student_dash"
+        app:popUpTo="@id/loginFragment"
+        app:popUpToInclusive="true"
+        app:destination="@id/studentDashFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/login_to_teacher_dash"
+        app:popUpTo="@id/loginFragment"
+        app:popUpToInclusive="true"
+        app:destination="@id/teacherDashFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/profile_to_login"
+        app:popUpTo="@id/profileFragment"
+        app:popUpToInclusive="true"
+        app:destination="@id/loginFragment"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <!-- Fragments -->
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.jones.myquiz.ui.screens.login.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/action_loginFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_login" />
+
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.jones.myquiz.ui.screens.register.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
-        <action
-            android:id="@+id/action_registerFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+        tools:layout="@layout/fragment_register" />
+
+    <fragment
+        android:id="@+id/studentDashFragment"
+        android:name="com.jones.myquiz.ui.screens.studentdash.StudentDashFragment"
+        android:label="fragment_student_dash"
+        tools:layout="@layout/fragment_student_dash" />
+
+    <fragment
+        android:id="@+id/teacherDashFragment"
+        android:name="com.jones.myquiz.ui.screens.teacherdash.TeacherDashFragment"
+        android:label="fragment_teacher_dash"
+        tools:layout="@layout/fragment_teacher_dash" />
+
+    <fragment
+        android:id="@+id/addQuizFragment"
+        android:name="com.jones.myquiz.ui.screens.addquiz.AddQuizFragment"
+        android:label="fragment_add_quiz"
+        tools:layout="@layout/fragment_add_quiz" />
+
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.jones.myquiz.ui.screens.quiz.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz">
+        <argument
+            app:argType="string"
+            android:name="quizId" />
     </fragment>
+
+    <fragment
+        android:id="@+id/joinQuizFragment"
+        android:name="com.jones.myquiz.ui.screens.joinquiz.JoinQuizFragment"
+        android:label="fragment_join_quiz"
+        tools:layout="@layout/fragment_join_quiz" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.jones.myquiz.ui.screens.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/leaderboardFragment"
+        android:name="com.jones.myquiz.ui.screens.leaderboard.LeaderBoardFragment"
+        android:label="fragment_leaderboard"
+        tools:layout="@layout/fragment_leaderboard" />
 </navigation>

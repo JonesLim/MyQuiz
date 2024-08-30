@@ -62,6 +62,7 @@ dependencies {
     androidTestImplementation(libs.androidx.junit.v115)
     androidTestImplementation(libs.androidx.espresso.core.v351)
 
+    implementation (libs.androidx.transition)
 
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
@@ -72,9 +73,13 @@ dependencies {
     implementation(libs.androidx.fragment.ktx)
 
     implementation(libs.play.services.auth)
-    ksp(libs.hilt.android.compiler.v2481)
 
     implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler.v2481)
+
+    implementation (libs.lottie)
+
+    implementation (libs.firebase.appcheck.playintegrity)
 
     implementation(libs.glide)
 

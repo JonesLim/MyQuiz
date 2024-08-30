@@ -22,7 +22,7 @@
             android:layout_height="100dp"
             android:layout_marginBottom="20dp"
             android:layout_gravity="start"
-            android:background="@drawable/quiz"
+            android:background="@drawable/quiz_in_app"
             android:contentDescription="@string/app_icon" />
 
 
@@ -30,11 +30,12 @@
             android:id="@+id/tv_login_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/register"
-            android:textSize="60sp"
-            android:textStyle="bold"
             android:layout_gravity="start"
-            android:textColor="@color/textColorDark" />
+            android:text="@string/register"
+            android:textColor="@color/textColorDark"
+            android:textSize="50sp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_login_desc"
@@ -53,7 +54,9 @@
             android:layout_marginVertical="5dp"
             app:hintEnabled="false"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:helperTextTextAppearance="@style/TextAppearance.MaterialComponents.Caption">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etName"
@@ -61,9 +64,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/textColorDark"
                 android:textStyle="italic"
-                android:hint="@string/email"
+                android:hint="@string/name"
                 android:background="@android:color/transparent" />
-
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -73,7 +75,9 @@
             android:layout_marginVertical="5dp"
             app:hintEnabled="false"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:helperTextTextAppearance="@style/TextAppearance.MaterialComponents.Caption">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etEmail"
@@ -92,7 +96,9 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
             app:hintEnabled="false"
-            app:passwordToggleEnabled="true">
+            app:passwordToggleEnabled="true"
+            app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:helperTextTextAppearance="@style/TextAppearance.MaterialComponents.Caption">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etPassword"
@@ -112,9 +118,12 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
             app:hintEnabled="false"
-            app:passwordToggleEnabled="true">
+            app:passwordToggleEnabled="true"
+            app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:helperTextTextAppearance="@style/TextAppearance.MaterialComponents.Caption">
 
-            <com.google.android.material.textfield.TextInputEditText
+
+        <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etConfirmPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -130,10 +139,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:startIconDrawable="@drawable/ic_role"
-            android:layout_marginHorizontal="15dp"
             android:layout_marginTop="20dp"
-            android:background="@color/transparent"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu" >
+           >
 
             <AutoCompleteTextView
                 android:id="@+id/atvRole"
@@ -141,7 +148,12 @@
                 android:layout_height="match_parent"
                 android:textColor="@color/textColorDark"
                 android:textStyle="italic"
-                android:hint="@string/role" />
+                android:paddingStart="40dp"
+                android:hint="@string/role"
+                android:backgroundTint="@color/transparent"
+                android:inputType="none"
+                android:padding="20dp"
+                />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -163,10 +175,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/login"
-            android:textColor="@android:color/holo_blue_dark"
+            android:textColor="@color/colorPrimaryDark"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="110dp"
-            android:textStyle="italic"
+            android:layout_marginBottom="85dp"
+            android:textStyle="italic|bold"
             android:clickable="true"
             android:focusable="true" />
 

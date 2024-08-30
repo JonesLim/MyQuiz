@@ -29,7 +29,7 @@ abstract class BaseFragment<T:ViewBinding> : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel.onCreate()
+         viewModel.onCreate()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -56,39 +56,24 @@ abstract class BaseFragment<T:ViewBinding> : Fragment() {
     }
 
     fun showSnackbar(view: View, msg: String, isError: Boolean = false) {
-
-        val fragmentView = view
-        if (fragmentView != null && isAdded && !isDetached) {
-
+        if (view.isAttachedToWindow) { // Ensure view is attached
             val snackbar = Snackbar.make(view, msg, Snackbar.LENGTH_LONG)
 
             if (isError) {
                 snackbar.setBackgroundTint(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.colorError
-                    )
+                    ContextCompat.getColor(requireContext(), R.color.colorError)
                 )
             } else {
                 snackbar.setBackgroundTint(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.mutedClay
-                    )
+                    ContextCompat.getColor(requireContext(), R.color.mutedPastelYellow)
                 ).setTextColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.mutedPastelPink
-                    )
+                    ContextCompat.getColor(requireContext(), R.color.colorInfo)
                 )
             }
             snackbar.show()
-
         } else {
-            Log.e("SnackbarError", "Cannot show Snackbar: Fragment is not attached or view is null.")
+            Log.e("SnackbarError", "Cannot show Snackbar: View is not attached.")
         }
-
-
     }
 
     fun logMsg(msg: String, tag: String = "debugging") {

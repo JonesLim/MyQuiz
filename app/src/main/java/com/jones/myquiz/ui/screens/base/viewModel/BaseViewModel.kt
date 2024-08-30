@@ -13,21 +13,16 @@ abstract class BaseViewModel : ViewModel() {
     protected val _success = MutableSharedFlow<String>()
     val success: SharedFlow<String> = _success
 
-    open fun onCreate() {
-
-    }
+    open fun onCreate() {}
 
     suspend fun <T> errorHandler(callback: suspend () -> T?): T? {
         return try {
             callback()
         } catch (e: Exception) {
-            withContext(Dispatchers.Main) {
-                _error.emit(e.message.toString())
-            }
+            _error.emit(e.message.toString())
             e.printStackTrace()
             null
         }
     }
-
 
 }

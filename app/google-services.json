@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "795273988447",
+    "project_id": "myquiz-c8593",
+    "storage_bucket": "myquiz-c8593.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795273988447:android:a512e9381d48a7f3874eea",
+        "android_client_info": {
+          "package_name": "com.jones.myquiz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDj9f4wTu381K3JaAF9qpeeDyY1QkDMGC4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

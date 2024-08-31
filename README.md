@@ -122,7 +122,33 @@ To import quizzes via CSV:
 
 ## **Screenshots**
 
-Include screenshots or GIFs of the app to demonstrate the UI and functionality.
+Screenshots of the app to demonstrate the UI and functionality.
+
+**Teacher Role:**
+    
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/11e4c42d-d619-4d62-aeff-8dfb91764a58" alt="Splash Screen" width="200"/>
+  <img src="https://github.com/user-attachments/assets/c8754a2c-fb47-494e-b21c-b14aad5ea1aa" alt="Register Screen" width="200"/>
+  <img src="https://github.com/user-attachments/assets/d815d51a-1998-417d-8833-4be8e5e0848e" alt="Login Screen" width="200"/>    
+  <img src="https://github.com/user-attachments/assets/644591d7-ed93-4a38-9d63-ee597480f100" alt="Teacher Dashboard Screen" width="200"/>
+  <img src="https://github.com/user-attachments/assets/d07186f2-d4ed-4e72-bff5-9de44a45e6d0" alt="Add Quiz Screen" width="200"/>
+  <img src="https://github.com/user-attachments/assets/36bf9bdd-ca7d-48b0-8b12-138e89e86a27" alt="Leaderboard Screen" width="200"/>
+  <img src="https://github.com/user-attachments/assets/5dd48251-f027-41f3-9e38-07319611c1b0" alt="Profile Screen" width="200"/>
+</p>
+    
+**Student Role:**
+    
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/11e4c42d-d619-4d62-aeff-8dfb91764a58" alt="Splash Screen" width="200"/>
+  <img src="https://github.com/user-attachments/assets/c8754a2c-fb47-494e-b21c-b14aad5ea1aa" alt="Register Screen" width="200"/>
+  <img src="https://github.com/user-attachments/assets/d815d51a-1998-417d-8833-4be8e5e0848e" alt="Login Screen" width="200"/>    
+  <img src="https://github.com/user-attachments/assets/86edae24-907e-4861-8142-93bd18c001f2" alt="Student Dashboard Screen" width="200"/>
+  <img src="https://github.com/user-attachments/assets/f2efb9b8-92be-4bf2-ae84-7cf67a8f78dc" alt="Join Quiz Screen" width="200"/>
+  <img src="https://github.com/user-attachments/assets/47a22e8b-ca0c-454f-b800-dc09fddfd2fb" alt="Quiz Screen" width="200"/>
+  <img src="https://github.com/user-attachments/assets/99d08db2-d859-41e1-8fb2-dca7b3a7e8db" alt="Score Screen" width="200"/>
+  <img src="https://github.com/user-attachments/assets/36bf9bdd-ca7d-48b0-8b12-138e89e86a27" alt="Leaderboard Screen" width="200"/>
+  <img src="https://github.com/user-attachments/assets/c7704fe8-b486-4a22-a337-3975e60f3af3" alt="Profile Screen" width="200"/>
+</p>
 
 ## **Project Structure**
 

@@ -13,9 +13,8 @@ This project is a **Quiz Application** where teachers can create accounts, manag
 5. [Usage Instructions](#usage-instructions)
 6. [CSV Import](#csv-import)
 7. [Screenshots](#screenshots)
-8. [Documentation](#documentation)
 9. [Project Structure](#project-structure)
-10. [Technologies Used](#technologies-used)
+9. [Technologies Used](#technologies-used)
 
 ## **Features**
 
@@ -125,10 +124,6 @@ To import quizzes via CSV:
 
 Include screenshots or GIFs of the app to demonstrate the UI and functionality.
 
-## **Documentation**
-
-The app’s architecture, design decisions, and codebase have been documented for easy understanding. You can find the documentation [here](#).
-
 ## **Project Structure**
 
 - **app/:** Contains the source code.
@@ -144,3 +139,4 @@ The app’s architecture, design decisions, and codebase have been documented fo
 - **MVVM Architecture**
 - **Material Design**
 - **CSV Parsing**
+- **Lottie for Animations**

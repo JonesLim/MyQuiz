@@ -65,10 +65,6 @@ The app follows the **MVVM (Model-View-ViewModel)** architectural pattern to ens
 
 The app's design follows **Material Design** guidelines for a clean and intuitive interface. The design prioritizes user-friendly navigation and responsiveness across different devices.
 
-### **Wireframes and Prototypes**
-
-Wireframes and prototypes were created to visualize the layout and user flow before implementation.
-
 ## **Setup Instructions**
 
 ### **Prerequisites**

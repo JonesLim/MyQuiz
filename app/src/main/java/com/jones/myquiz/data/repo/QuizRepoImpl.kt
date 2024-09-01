@@ -5,7 +5,6 @@ import com.jones.myquiz.core.service.AuthService
 import com.jones.myquiz.data.model.Quiz
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
-import com.jones.myquiz.data.repo.QuizRepo
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.tasks.await

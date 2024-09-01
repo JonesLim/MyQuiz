@@ -1,7 +1,6 @@
 package com.jones.myquiz.ui.screens.quiz
 
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -127,7 +126,6 @@ class QuizFragment : BaseFragment<FragmentQuizBinding>() {
         lifecycleScope.launch {
             viewModel.timerExpired.collect { expired ->
                 if (expired) {
-                    // Timer expired, handle UI update
                     binding.LLQuestion.visibility = View.GONE
                     binding.LLResult.visibility = View.VISIBLE
                     viewModel.addResult(result.toString(), viewModel.quiz.value.QuizId)
@@ -152,25 +150,19 @@ class QuizFragment : BaseFragment<FragmentQuizBinding>() {
 
     private fun handleBackButton() {
         if (binding.LLResult.visibility == View.VISIBLE) {
-            // If on the result screen, navigate back to the dashboard
             val action = QuizFragmentDirections.quizToDash()
             navController.navigate(action)
         } else if (binding.LLQuestion.visibility == View.VISIBLE) {
-            // If answering questions, show a confirmation dialog before popping back stack
             showBackConfirmationDialog()
         }
     }
 
     private fun showBackConfirmationDialog() {
-        // Show a confirmation dialog
-        val dialog = AlertDialog.Builder(requireContext())
-            .setTitle("Exit Quiz")
+        val dialog = AlertDialog.Builder(requireContext()).setTitle("Exit Quiz")
             .setMessage("Are you sure you want to exit the quiz? Your progress will not be saved.")
             .setPositiveButton("Yes") { _, _ ->
                 navController.popBackStack()
-            }
-            .setNegativeButton("No", null)
-            .create()
+            }.setNegativeButton("No", null).create()
         dialog.show()
     }
 }

@@ -14,7 +14,7 @@
     <string name="edit_profile_pic">Edit Profile Pic</string>
     <!--    <string name="username">Name: POtaTo_SLaYer</string>-->
     <string name="username">Username</string>
-    <string name="email_profile">Email: Im dead</string>
+    <string name="email_profile">Email:</string>
     <string name="logout">LogOut</string>
     <string name="title">Title</string>
     <string name="description">Description</string>
@@ -38,6 +38,23 @@
     <string name="back">Back</string>
     <string name="dialog_icon_desc">Dialog Logout Confirmation</string>
     <string name="are_you_sure_you_want_to_logout">Are you sure you want to log out?</string>
+    <string name="selected_csv_file_name">Selected CSV File Name</string>
+    <string name="enter_quiz_id">Enter Quiz ID</string>
+    <string name="select_csv_file">Select CSV File</string>
+    <string name="create_quiz">Create Quiz</string>
+    <string name="start_quiz">Start Quiz</string>
+    <string name="enter_a_quiz_id">Enter a Quiz ID</string>
+    <string name="sort_rank_by_quiz_id">Sort Rank by Quiz Id</string>
+    <string name="username_profile">Username:</string>
+    <string name="duration_quiz">Duration:</string>
+    <string name="question">Question</string>
+    <string name="opt_1">Opt 1</string>
+    <string name="next">Next</string>
+    <string name="quiz_results">Quiz Results</string>
+    <string name="score_quiz">Score:</string>
+    <string name="username_leaderboard">Username:</string>
+    <string name="quiz_id_leaderboard">Quiz ID:</string>
+    <string name="score_leaderboard">Score:</string>
 
     <string-array name="roles_array">
         <item>Teacher</item>

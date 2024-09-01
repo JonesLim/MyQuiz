@@ -5,9 +5,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashActivity">
+    tools:context=".ui.screens.splash.SplashActivity">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/mutedPastelPink">
@@ -17,9 +17,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            app:lottie_rawRes="@raw/animation_splash"
             app:lottie_autoPlay="true"
-            app:lottie_loop="true" />
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/animation_splash" />
 
     </RelativeLayout>
 

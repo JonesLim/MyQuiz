@@ -1,12 +1,10 @@
 package com.jones.myquiz.ui.screens.register
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.jones.myquiz.R
@@ -22,9 +20,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
     override val viewModel: RegisterViewModelImpl by viewModels()
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         binding = FragmentRegisterBinding.inflate(inflater, container, false)
         return binding.root
@@ -34,7 +30,8 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
         super.onViewCreated(view, savedInstanceState)
 
         val roles = resources.getStringArray(R.array.roles_array)
-        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_dropdown_item_1line, roles)
+        val adapter =
+            ArrayAdapter(requireContext(), android.R.layout.simple_dropdown_item_1line, roles)
 
         binding.atvRole.setAdapter(adapter)
         binding.atvRole.setOnClickListener {
@@ -59,9 +56,11 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
                 name.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPass.isEmpty() || role.isEmpty() -> {
                     showSnackbar(view, "All fields are required!", isError = true)
                 }
+
                 password != confirmPass -> {
                     showSnackbar(view, "Passwords do not match!", isError = true)
                 }
+
                 else -> {
                     viewModel.register(name, email, password, confirmPass, role)
                 }

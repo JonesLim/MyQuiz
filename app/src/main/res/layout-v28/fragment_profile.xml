@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/app_bg"
+    android:orientation="vertical"
     tools:context=".ui.screens.profile.ProfileFragment">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="20dp"
-        android:paddingHorizontal="20dp"
-        >
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp">
+
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -26,21 +26,21 @@
                 android:id="@+id/ivProfile"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/ic_profile"
+                android:contentDescription="@string/profile"
                 android:scaleType="centerCrop"
-                android:contentDescription="@string/profile" />
+                android:src="@drawable/ic_profile" />
 
             <ImageView
                 android:id="@+id/icEditProfilePic"
                 android:layout_width="22dp"
                 android:layout_height="22dp"
-                android:src="@drawable/camera"
                 android:layout_gravity="bottom|end"
-                android:layout_marginBottom="5dp"
                 android:layout_marginEnd="5dp"
-                android:padding="5dp"
+                android:layout_marginBottom="5dp"
                 android:background="@drawable/circle_shape"
                 android:contentDescription="@string/edit_profile_pic"
+                android:padding="5dp"
+                android:src="@drawable/camera"
                 app:tint="@color/textColorDark" />
 
         </FrameLayout>
@@ -49,64 +49,64 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="20dp"
-            android:gravity="start">
+            android:gravity="start"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:gravity="start"
-                >
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/textColorDark"
-                    android:textStyle="bold"
                     android:layout_marginBottom="10dp"
-                    android:text="Username:"
-                    android:textSize="18sp" />
+                    android:text="@string/username_profile"
+                    android:textColor="@color/textColorDark"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvUsername"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/textColorDark"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="10dp"
                     android:layout_marginStart="10dp"
-                    android:text="@string/username"
+                    android:layout_marginBottom="10dp"
                     android:maxLines="1"
-                    android:textSize="18sp" />
+                    android:text="@string/username"
+                    android:textColor="@color/textColorDark"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="start">
+                android:gravity="start"
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/email_profile"
                     android:textColor="@color/textColorDark"
-                    android:textStyle="bold"
-                    android:text="Email:"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvUserEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/textColorDark"
-                    android:textStyle="bold"
                     android:layout_marginStart="10dp"
-                    android:text="@string/email"
                     android:maxLines="1"
-                    android:textSize="18sp" />
+                    android:text="@string/email"
+                    android:textColor="@color/textColorDark"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
 
             </LinearLayout>
@@ -117,8 +117,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <View
             android:layout_width="match_parent"
@@ -129,29 +128,29 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="start|center">
+            android:gravity="start|center"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="40dp"
+                android:background="@color/transparent"
                 android:paddingStart="20dp"
                 android:src="@drawable/logout"
-                android:background="@color/transparent"
                 app:tint="@color/mutedRed" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:focusable="true"
-                android:textColor="@color/mutedRed"
-                android:textStyle="bold"
-                android:textAlignment="textStart"
                 android:background="@color/transparent"
                 android:clickable="true"
+                android:focusable="true"
+                android:text="@string/logout"
+                android:textAlignment="textStart"
+                android:textColor="@color/mutedRed"
                 android:textSize="18sp"
-                android:text="@string/logout" />
+                android:textStyle="bold" />
 
         </LinearLayout>
 

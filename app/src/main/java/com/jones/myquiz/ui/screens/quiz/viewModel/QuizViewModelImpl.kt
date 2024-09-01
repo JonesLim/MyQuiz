@@ -11,12 +11,9 @@ import com.jones.myquiz.data.repo.QuizRepo
 import com.jones.myquiz.data.repo.ScoreRepo
 import com.jones.myquiz.data.repo.UserRepo
 import com.jones.myquiz.ui.screens.base.viewModel.BaseViewModel
-import com.jones.myquiz.ui.screens.quiz.viewModel.QuizViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -30,16 +27,19 @@ class QuizViewModelImpl @Inject constructor(
     private val userRepo: UserRepo
 ) : BaseViewModel(), QuizViewModel {
 
-    private val _quiz: MutableStateFlow<Quiz> = MutableStateFlow(Quiz(
-        questionTitles = emptyList(),
-        options = emptyList(),
-        answers = emptyList(),
-        timeLimit = -1,
-        timeCreated = 0
-    ))
+    private val _quiz: MutableStateFlow<Quiz> = MutableStateFlow(
+        Quiz(
+            questionTitles = emptyList(),
+            options = emptyList(),
+            answers = emptyList(),
+            timeLimit = -1,
+            timeCreated = 0
+        )
+    )
     val quiz: StateFlow<Quiz> = _quiz
 
-    private val _user = MutableStateFlow(User(name = "Unknown", email = "Unknown", role = "Unknown"))
+    private val _user =
+        MutableStateFlow(User(name = "Unknown", email = "Unknown", role = "Unknown"))
     val user: StateFlow<User> = _user
 
     private val _remainingTime = MutableStateFlow<String?>(null)
@@ -59,7 +59,6 @@ class QuizViewModelImpl @Inject constructor(
             }?.let {
                 Log.d("debugging", "$it")
                 _quiz.value = it
-                // Start the timer on the main thread
                 withContext(Dispatchers.Main) {
                     startCountdownTimer(it.timeLimit)
                 }
@@ -67,7 +66,6 @@ class QuizViewModelImpl @Inject constructor(
         }
     }
 
-    // Timer
     override fun startCountdownTimer(timeLimit: Long) {
         val countdownTimer = object : CountDownTimer(timeLimit * 60 * 1000, 1000) {
             override fun onTick(millisUntilFinished: Long) {

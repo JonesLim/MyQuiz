@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:background="@drawable/app_bg"
+    android:orientation="vertical"
     tools:context=".ui.screens.addquiz.AddQuizFragment">
 
-    <!-- Use a separate layout for the button if needed -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,73 +17,59 @@
             android:id="@+id/btnBack"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_margin="16dp"
-            app:lottie_rawRes="@raw/animation_back"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            android:contentDescription="@string/back"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:layout_margin="16dp"
             android:clickable="true"
-            android:focusable="true"/>
+            android:contentDescription="@string/back"
+            android:focusable="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/animation_back" />
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:gravity="center"
-        >
+        android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            app:boxStrokeColor="@color/mutedPastelYellow"
+            android:hint="@string/enter_quiz_id"
             android:textColorHint="@color/textColorDark"
-            android:hint="Enter Quiz ID">
+            app:boxStrokeColor="@color/mutedPastelYellow">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etQuizId"
                 android:layout_width="match_parent"
-                android:textColor="@color/black"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
-            app:boxStrokeColor="@color/mutedPastelYellow"
+            android:hint="Enter Title"
             android:textColorHint="@color/textColorDark"
-            android:hint="Enter Title">
+            app:boxStrokeColor="@color/mutedPastelYellow">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etTitle"
                 android:layout_width="match_parent"
-                android:textColor="@color/black"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
-
-<!--        <com.google.android.material.textfield.TextInputLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginHorizontal="16dp"-->
-<!--            android:layout_marginTop="15dp"-->
-<!--            app:boxStrokeColor="@color/mutedPastelYellow"-->
-<!--            android:textColorHint="@color/textColorDark"-->
-<!--            android:hint="Set Timer (Minutes)">-->
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:id="@+id/tvTimer"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:layout_height="wrap_content" />-->
-<!--        </com.google.android.material.textfield.TextInputLayout>-->
 
         <TextView
             android:id="@+id/tvSelectedFile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
-            android:text="Selected CSV File Name"
+            android:text="@string/selected_csv_file_name"
             android:textColor="@color/textColorDark"
             android:textStyle="bold" />
 
@@ -94,21 +79,21 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
             android:backgroundTint="@color/mutedPastelGreen"
+            android:text="@string/select_csv_file"
             android:textColor="@color/colorInfo"
-            android:text="Select CSV File"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp"/>
+            android:textStyle="bold" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnCreate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
             android:backgroundTint="@color/mutedPastelPurple"
+            android:text="@string/create_quiz"
             android:textColor="@color/mutedPurple"
-            android:text="Create Quiz"
-            android:textStyle="bold"
-            android:layout_marginTop="32dp" />
+            android:textStyle="bold" />
     </LinearLayout>
 
 </LinearLayout>

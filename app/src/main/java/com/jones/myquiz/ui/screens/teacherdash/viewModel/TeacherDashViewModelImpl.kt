@@ -1,6 +1,5 @@
 package com.jones.myquiz.ui.screens.teacherdash.viewModel
 
-import android.net.Uri
 import android.util.Log
 import androidx.lifecycle.viewModelScope
 import com.jones.myquiz.core.service.AuthService
@@ -9,12 +8,9 @@ import com.jones.myquiz.data.model.User
 import com.jones.myquiz.data.repo.QuizRepo
 import com.jones.myquiz.data.repo.UserRepo
 import com.jones.myquiz.ui.screens.base.viewModel.BaseViewModel
-import com.jones.myquiz.ui.screens.teacherdash.viewModel.TeacherDashViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -24,9 +20,10 @@ class TeacherDashViewModelImpl @Inject constructor(
     private val quizRepo: QuizRepo,
     private val authService: AuthService,
     private val userRepo: UserRepo
-): BaseViewModel(), TeacherDashViewModel {
+) : BaseViewModel(), TeacherDashViewModel {
 
-    private val _user = MutableStateFlow(User(name = "Unknown", email = "Unknown", role = "Unknown"))
+    private val _user =
+        MutableStateFlow(User(name = "Unknown", email = "Unknown", role = "Unknown"))
     val user: StateFlow<User> = _user
 
     private val _quizs = MutableStateFlow<List<Quiz>>(
@@ -43,7 +40,6 @@ class TeacherDashViewModelImpl @Inject constructor(
     override fun getQuiz() {
         viewModelScope.launch(Dispatchers.IO) {
             quizRepo.getAllQuiz().collect { quizList ->
-                // Sort quizzes by `timeCreated` in descending order
                 val sortedQuizzes = quizList.sortedByDescending { it.timeCreated }
                 _quizs.value = sortedQuizzes
             }
@@ -55,7 +51,7 @@ class TeacherDashViewModelImpl @Inject constructor(
         Log.d("debugging", firebaseUser?.uid.toString())
         firebaseUser?.let {
             viewModelScope.launch(Dispatchers.IO) {
-                errorHandler { userRepo.getUser(it.uid) }?.let {  user ->
+                errorHandler { userRepo.getUser(it.uid) }?.let { user ->
                     Log.d("debugging", user.toString())
                     _user.value = user
                 }

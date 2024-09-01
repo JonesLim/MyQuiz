@@ -5,9 +5,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.jones.myquiz.data.model.Score
 import com.jones.myquiz.databinding.ItemLayoutLeaderboardBinding
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
 
 class ScoreAdapter(
     private var score: List<Score>
@@ -44,9 +41,6 @@ class ScoreAdapter(
                 tvUsername.text = score.name
                 tvScore.text = score.result
                 tvQuizId.text = score.quizId
-//                val dateFormat = SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.getDefault())
-//                val formattedDate = dateFormat.format(Date(score.createdAt))
-//                tvFinishtime.text = formattedDate
             }
         }
     }

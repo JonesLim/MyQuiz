@@ -1,10 +1,12 @@
-package com.jones.myquiz
+package com.jones.myquiz.ui.screens.splash
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
+import com.jones.myquiz.MainActivity
+import com.jones.myquiz.R
 import com.jones.myquiz.core.service.AuthService
 import com.jones.myquiz.data.repo.UserRepo
 import dagger.hilt.android.AndroidEntryPoint
@@ -26,7 +28,6 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        // Check user authentication and navigate accordingly
         checkUserAuthentication()
     }
 
@@ -49,7 +50,6 @@ class SplashActivity : AppCompatActivity() {
                 R.id.loginFragment
             }
 
-            // Transition to MainActivity after the authentication check
             runOnUiThread {
                 Handler(Looper.getMainLooper()).postDelayed({
                     val intent = Intent(this@SplashActivity, MainActivity::class.java).apply {
@@ -57,7 +57,7 @@ class SplashActivity : AppCompatActivity() {
                     }
                     startActivity(intent)
                     finish()
-                }, 2000L) // Duration of splash screen in milliseconds (e.g., 3 seconds)
+                }, 2000L)
             }
         }
     }

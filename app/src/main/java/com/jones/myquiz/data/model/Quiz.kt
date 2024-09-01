@@ -1,7 +1,7 @@
 package com.jones.myquiz.data.model
 
 data class Quiz(
-    val id: String ="",
+    val id: String = "",
     val QuizId: String = "",
     val title: String = "",
     val csv: String = "",
@@ -12,10 +12,10 @@ data class Quiz(
     val answers: List<String>,
     val creatorName: String = "",
     val timeLimit: Long,
-    val timeCreated: Long // Add this field
+    val timeCreated: Long
 
 ) {
-    fun toHashMap():HashMap<String, Any> {
+    fun toHashMap(): HashMap<String, Any> {
         return hashMapOf(
             "id" to id,
             "QuizId" to QuizId,

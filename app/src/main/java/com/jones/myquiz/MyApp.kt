@@ -6,7 +6,7 @@ import com.google.firebase.appcheck.playintegrity.PlayIntegrityAppCheckProviderF
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class MyApp: Application() {
+class MyApp : Application() {
     override fun onCreate() {
         super.onCreate()
         val firebaseAppCheck = FirebaseAppCheck.getInstance()

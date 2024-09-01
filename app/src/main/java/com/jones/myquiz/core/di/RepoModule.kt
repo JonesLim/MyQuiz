@@ -7,12 +7,6 @@ import com.jones.myquiz.data.repo.QuizRepo
 import com.jones.myquiz.data.repo.QuizRepoImpl
 import com.jones.myquiz.data.repo.ScoreRepo
 import com.jones.myquiz.data.repo.ScoreRepoImpl
-//import com.jones.myquiz.data.repo.QuestionRepo
-//import com.jones.myquiz.data.repo.QuestionRepoImpl
-//import com.jones.myquiz.data.repo.QuizRepo
-//import com.jones.myquiz.data.repo.QuizRepoImpl
-//import com.jones.myquiz.data.repo.ScoreRepo
-//import com.jones.myquiz.data.repo.ScoreRepoImpl
 import com.jones.myquiz.data.repo.UserRepo
 import com.jones.myquiz.data.repo.UserRepoImpl
 import dagger.Module

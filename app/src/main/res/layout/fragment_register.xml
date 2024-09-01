@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:background="@drawable/register"
+    android:orientation="vertical"
     tools:context=".ui.screens.register.RegisterFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp"
         android:layout_gravity="bottom"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
 
         <ImageView
             android:id="@+id/iv_login"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginBottom="20dp"
             android:layout_gravity="start"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/quiz_in_app"
             android:contentDescription="@string/app_icon" />
 
@@ -31,41 +31,41 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
+            android:layout_marginBottom="10dp"
             android:text="@string/register"
             android:textColor="@color/textColorDark"
             android:textSize="50sp"
-            android:layout_marginBottom="10dp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_login_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginBottom="40dp"
             android:text="@string/sign_up_to_continue"
             android:textColor="@color/textColorDark"
-            android:textSize="16sp"
-            android:layout_gravity="start"
-            android:layout_marginBottom="40dp" />
+            android:textSize="16sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
+            app:helperTextTextAppearance="@style/TextAppearance.MaterialComponents.Caption"
             app:hintEnabled="false"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Body1"
-            app:helperTextTextAppearance="@style/TextAppearance.MaterialComponents.Caption">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/textColorDark"
-                android:textStyle="italic"
+                android:background="@android:color/transparent"
                 android:hint="@string/name"
-                android:background="@android:color/transparent" />
+                android:textColor="@color/textColorDark"
+                android:textStyle="italic" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -73,20 +73,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
+            app:helperTextTextAppearance="@style/TextAppearance.MaterialComponents.Caption"
             app:hintEnabled="false"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Body1"
-            app:helperTextTextAppearance="@style/TextAppearance.MaterialComponents.Caption">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/textColorDark"
-                android:textStyle="italic"
+                android:background="@android:color/transparent"
                 android:hint="@string/email"
-                android:background="@android:color/transparent" />
+                android:textColor="@color/textColorDark"
+                android:textStyle="italic" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -95,20 +95,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
+            app:helperTextTextAppearance="@style/TextAppearance.MaterialComponents.Caption"
             app:hintEnabled="false"
-            app:passwordToggleEnabled="true"
             app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Body1"
-            app:helperTextTextAppearance="@style/TextAppearance.MaterialComponents.Caption">
+            app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/password"
                 android:inputType="textPassword"
                 android:textColor="@color/textColorDark"
-                android:textStyle="italic"
-                android:hint="@string/password"
-                android:background="@android:color/transparent" />
+                android:textStyle="italic" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -117,43 +117,41 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
+            app:helperTextTextAppearance="@style/TextAppearance.MaterialComponents.Caption"
             app:hintEnabled="false"
-            app:passwordToggleEnabled="true"
             app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Body1"
-            app:helperTextTextAppearance="@style/TextAppearance.MaterialComponents.Caption">
+            app:passwordToggleEnabled="true">
 
 
-        <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etConfirmPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/re_type_password"
                 android:inputType="textPassword"
                 android:textColor="@color/textColorDark"
-                android:textStyle="italic"
-                android:hint="@string/re_type_password"
-                android:background="@android:color/transparent" />
+                android:textStyle="italic" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:startIconDrawable="@drawable/ic_role"
             android:layout_marginTop="20dp"
-           >
+            app:startIconDrawable="@drawable/ic_role">
 
             <AutoCompleteTextView
                 android:id="@+id/atvRole"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="@color/textColorDark"
-                android:textStyle="italic"
-                android:paddingStart="40dp"
-                android:hint="@string/role"
                 android:backgroundTint="@color/transparent"
+                android:hint="@string/role"
                 android:inputType="none"
                 android:padding="20dp"
-                />
+                android:paddingStart="40dp"
+                android:textColor="@color/textColorDark"
+                android:textStyle="italic" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -161,26 +159,25 @@
             android:id="@+id/btnRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/mutedSand"
-            android:textStyle="bold"
-            android:textColor="@color/textColorDark"
-            android:text="@string/register"
             android:layout_marginTop="30dp"
+            android:backgroundTint="@color/mutedSand"
             android:clickable="true"
             android:focusable="true"
-            />
+            android:text="@string/register"
+            android:textColor="@color/textColorDark"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/login"
-            android:textColor="@color/colorPrimaryDark"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="85dp"
-            android:textStyle="italic|bold"
             android:clickable="true"
-            android:focusable="true" />
+            android:focusable="true"
+            android:text="@string/login"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="italic|bold" />
 
 
     </LinearLayout>

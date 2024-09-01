@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/app_bg"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@drawable/app_bg"
     tools:context=".ui.screens.leaderboard.LeaderBoardFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="46dp"
             android:layout_height="46dp"
             android:layout_marginEnd="16dp"
-            app:tint="@color/textColorDark"
-            android:src="@drawable/ic_leaderboard" />
+            android:src="@drawable/ic_leaderboard"
+            app:tint="@color/textColorDark" />
 
         <TextView
             android:id="@+id/tvLeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="LeaderBoard"
-            android:textColor="@color/textColorDark"
-            android:textStyle="bold"
-            android:textSize="24sp"
             android:layout_marginTop="10dp"
+            android:text="@string/leaderboard"
+            android:textColor="@color/textColorDark"
+            android:textSize="24sp"
+            android:textStyle="bold"
             app:drawableTint="@color/mutedClay" />
 
     </LinearLayout>
 
 
     <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:hintTextColor="@color/mutedBlue"
-        android:textColorHint="@color/mutedClay"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="20dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        android:textColorHint="@color/mutedClay"
+        app:hintTextColor="@color/mutedBlue">
 
         <AutoCompleteTextView
             android:id="@+id/autoCompleteCategory"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Sort Rank by Quiz Id"
-            android:inputType="none"
-            android:textColor="@color/textColorDark"
-            android:textStyle="bold"
             android:background="@color/mutedPastelPink"
-            android:padding="16sp"/>
+            android:hint="@string/sort_rank_by_quiz_id"
+            android:inputType="none"
+            android:padding="16sp"
+            android:textColor="@color/textColorDark"
+            android:textStyle="bold" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -62,7 +62,7 @@
         android:id="@+id/rvLeaderBoard"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="40dp"/>
+        android:paddingBottom="40dp" />
 
 </LinearLayout>
 

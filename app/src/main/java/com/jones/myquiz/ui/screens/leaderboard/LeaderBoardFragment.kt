@@ -28,8 +28,7 @@ class LeaderBoardFragment : BaseFragment<FragmentLeaderboardBinding>() {
     protected var categorySelect = ""
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         binding = FragmentLeaderboardBinding.inflate(inflater, container, false)
         return binding.root

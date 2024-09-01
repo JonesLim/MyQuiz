@@ -1,11 +1,8 @@
 package com.jones.myquiz.ui.screens.base.viewModel
 
 import androidx.lifecycle.ViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
-import kotlinx.coroutines.withContext
-import java.lang.Exception
 
 abstract class BaseViewModel : ViewModel() {
     protected val _error = MutableSharedFlow<String>()

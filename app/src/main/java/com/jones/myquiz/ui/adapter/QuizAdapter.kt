@@ -7,8 +7,7 @@ import com.jones.myquiz.data.model.Quiz
 import com.jones.myquiz.databinding.ItemLayoutQuizBinding
 
 class QuizAdapter(
-    private var quizzes :List<Quiz>,
-    private val fileName: String
+    private var quizzes: List<Quiz>
 ): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(child: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val binding = ItemLayoutQuizBinding.inflate(

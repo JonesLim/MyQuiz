@@ -6,14 +6,11 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.documentfile.provider.DocumentFile
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.airbnb.lottie.LottieAnimationView
-import com.jones.myquiz.R
 import com.jones.myquiz.databinding.FragmentAddQuizBinding
 import com.jones.myquiz.ui.screens.addquiz.viewModel.AddQuizViewModelImpl
 import com.jones.myquiz.ui.screens.base.BaseFragment
@@ -52,12 +49,10 @@ class AddQuizFragment : BaseFragment<FragmentAddQuizBinding>() {
                 val quizId = etQuizId.text.toString()
                 val title = etTitle.text.toString()
 
-                // Check if quizId, title, and CSV file are not empty before proceeding
                 if (quizId.isNotBlank() && title.isNotBlank() && tvSelectedFile.text.isNotBlank()) {
                     viewModel.checkQuizIdExists(quizId) { exists ->
                         lifecycleScope.launch {
                         if (exists) {
-                            // Show a Toast message for the error
                             showSnackbar(view, "This Quiz ID has existed! Please try another ID.")
                         } else {
                             val timer = viewModel.timer.value
@@ -103,7 +98,7 @@ class AddQuizFragment : BaseFragment<FragmentAddQuizBinding>() {
             viewModel.success.collect {
                 if (shouldNavigateBack) {
                     navController.popBackStack()
-                    shouldNavigateBack = false // Reset the flag
+                    shouldNavigateBack = false
                 }
             }
         }

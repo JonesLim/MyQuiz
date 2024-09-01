@@ -12,15 +12,14 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_margin="16dp"
-        app:lottie_rawRes="@raw/animation_back"
+        android:clickable="true"
+        android:contentDescription="@string/back"
+        android:focusable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        android:contentDescription="@string/back"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-    />
+        app:lottie_rawRes="@raw/animation_back" />
 
     <LinearLayout
         android:id="@+id/LLQuestion"
@@ -36,12 +35,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Duration:"
+                android:text="@string/duration_quiz"
                 android:textAlignment="center"
                 android:textColor="@color/textColorDark"
                 android:textSize="20sp"
@@ -87,7 +87,7 @@
                     android:id="@+id/tvQuestion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Question"
+                    android:text="@string/question"
                     android:textAlignment="center"
                     android:textColor="@color/textColorDark"
                     android:textSize="18sp"
@@ -121,8 +121,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/gray_button_bg"
-                    android:text="Opt 1"
                     android:paddingStart="30dp"
+                    android:text="@string/opt_1"
                     android:textAllCaps="false"
                     android:textColor="@color/textColorDark"
                     android:textSize="18sp"
@@ -134,10 +134,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/gray_button_bg"
+                    android:paddingStart="30dp"
+                    android:text="@string/opt_1"
                     android:textAllCaps="false"
                     android:textColor="@color/textColorDark"
                     android:textSize="18sp"
-                    android:paddingStart="30dp"
                     android:textStyle="bold" />
 
                 <RadioButton
@@ -146,10 +147,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/gray_button_bg"
+                    android:paddingStart="30dp"
+                    android:text="@string/opt_1"
                     android:textAllCaps="false"
                     android:textColor="@color/textColorDark"
                     android:textSize="18sp"
-                    android:paddingStart="30dp"
                     android:textStyle="bold" />
 
                 <RadioButton
@@ -158,10 +160,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/gray_button_bg"
+                    android:paddingStart="30dp"
+                    android:text="@string/opt_1"
                     android:textAllCaps="false"
                     android:textColor="@color/textColorDark"
                     android:textSize="18sp"
-                    android:paddingStart="30dp"
                     android:textStyle="bold" />
 
 
@@ -178,8 +181,8 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="30dp"
             android:backgroundTint="@color/mutedPastelGreen"
+            android:text="@string/next"
             android:textColor="@color/textColorDark"
-            android:text="Next"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/llAnswer" />
@@ -191,38 +194,38 @@
         android:id="@+id/LLResult"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical"
-        android:visibility="gone"
-        android:gravity="center">
+        android:visibility="gone">
 
         <TextView
             android:id="@+id/tvResultTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Quiz Results"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="@color/textColorDark"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="8dp"
+            android:text="@string/quiz_results"
+            android:textColor="@color/textColorDark"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvScore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Score: 8/10"
+            android:layout_marginBottom="16dp"
+            android:text="@string/score_quiz"
             android:textColor="@color/textColorDark"
-            android:textSize="18sp"
-            android:layout_marginBottom="16dp"/>
+            android:textSize="18sp" />
 
 
         <Button
             android:id="@+id/btnFinish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Finish"
+            android:layout_marginTop="16dp"
             android:backgroundTint="@color/textColorDark"
-            android:layout_marginTop="16dp"/>
+            android:text="@string/finish" />
 
     </LinearLayout>
 

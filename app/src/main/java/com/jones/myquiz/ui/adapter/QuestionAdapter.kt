@@ -3,7 +3,6 @@ package com.jones.myquiz.ui.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.jones.myquiz.ui.adapter.QuizAdapter
 import com.jones.myquiz.data.model.Quiz
 import com.jones.myquiz.databinding.FragmentQuizBinding
 

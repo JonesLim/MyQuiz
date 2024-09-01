@@ -1,6 +1,5 @@
 package com.jones.myquiz
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -23,10 +22,8 @@ class MainActivity : AppCompatActivity() {
         navController = findNavController(R.id.navHostFragment)
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation_view)
 
-        // Retrieve the destination from the Intent extras
         val destination = intent.getIntExtra("destination", R.id.home)
 
-        // Navigate to the destination
         if (savedInstanceState == null) {
             navController.navigate(destination)
         }
@@ -37,14 +34,17 @@ class MainActivity : AppCompatActivity() {
                     navController.navigate(destination)
                     true
                 }
+
                 R.id.leaderboard -> {
                     navController.navigate(R.id.leaderboardFragment)
                     true
                 }
+
                 R.id.profile -> {
                     navController.navigate(R.id.profileFragment)
                     true
                 }
+
                 else -> false
             }
         }
@@ -54,6 +54,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.loginFragment, R.id.registerFragment, R.id.quizFragment, R.id.addQuizFragment, R.id.joinQuizFragment -> {
                     bottomNavigationView.visibility = View.GONE
                 }
+
                 else -> {
                     bottomNavigationView.visibility = View.VISIBLE
                 }

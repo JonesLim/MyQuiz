@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
+    android:backgroundTint="@color/transparent"
     app:cardCornerRadius="20dp"
-    app:cardElevation="0dp"
-    android:backgroundTint="@color/transparent">
+    app:cardElevation="0dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -29,80 +29,83 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="start"
-                android:paddingStart="20dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingStart="20dp">
+
                 <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.Material3.TitleLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/username_leaderboard"
                     android:textColor="@color/textColorDark"
-                    android:text="Username:"
-                    android:textStyle="bold"
-                    style="@style/TextAppearance.Material3.TitleLarge" />
+                    android:textStyle="bold" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/tvUsername"
+                    style="@style/TextAppearance.Material3.TitleLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/textColorDark"
+                    android:layout_marginStart="10dp"
                     android:text="@string/username"
-                    android:textStyle="bold"
-                    android:layout_marginStart="10dp"
-                    style="@style/TextAppearance.Material3.TitleLarge" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingStart="20dp"
-                android:gravity="start">
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:textColor="@color/textColorDark"
-                    android:text="Score:"
-                    android:textStyle="bold"
-                    android:layout_marginTop="8dp"
-                    style="@style/TextAppearance.Material3.BodyLarge" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/tvScore"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/textColorDark"
-                    android:text="@string/score"
-                    android:textStyle="bold"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginStart="10dp"
-                    style="@style/TextAppearance.Material3.BodyLarge" />
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="start"
-                android:paddingStart="20dp"
+                android:orientation="horizontal"
+                android:paddingStart="20dp">
 
-                android:orientation="horizontal">
                 <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.Material3.BodyLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/textColorDark"
-                    android:text="Quiz ID:"
-                    android:textStyle="bold"
                     android:layout_marginTop="8dp"
-                    style="@style/TextAppearance.Material3.BodyLarge" />
+                    android:text="@string/score_leaderboard"
+                    android:textColor="@color/textColorDark"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvScore"
+                    style="@style/TextAppearance.Material3.BodyLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/score"
+                    android:textColor="@color/textColorDark"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="horizontal"
+
+                android:paddingStart="20dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.Material3.BodyLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/quiz_id_leaderboard"
+                    android:textColor="@color/textColorDark"
+                    android:textStyle="bold" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/tvQuizId"
+                    style="@style/TextAppearance.Material3.BodyLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/textColorDark"
-                    android:text="@string/quizid"
-                    android:textStyle="bold"
-                    android:layout_marginTop="8dp"
                     android:layout_marginStart="10dp"
-                    style="@style/TextAppearance.Material3.BodyLarge" />
+                    android:layout_marginTop="8dp"
+                    android:text="@string/quizid"
+                    android:textColor="@color/textColorDark"
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>

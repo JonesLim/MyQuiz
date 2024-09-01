@@ -1,7 +1,6 @@
 package com.jones.myquiz.ui.screens.addquiz.viewModel
 
 import android.util.Log
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.jones.myquiz.core.service.AuthService
 import com.jones.myquiz.data.model.Question
@@ -9,7 +8,6 @@ import com.jones.myquiz.data.model.Quiz
 import com.jones.myquiz.data.model.User
 import com.jones.myquiz.data.repo.QuizRepo
 import com.jones.myquiz.data.repo.UserRepo
-import com.jones.myquiz.ui.screens.addquiz.viewModel.AddQuizViewModel
 import com.jones.myquiz.ui.screens.base.viewModel.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -102,7 +100,6 @@ class AddQuizViewModelImpl @Inject constructor(
                 var timer: Long? = null
                 lines.forEachIndexed { index, line ->
                     if (index == lines.size - 1) {
-                        // Last line should be the timer
                         timer = line.toLongOrNull()
                     } else {
                         val title = line.split(",")

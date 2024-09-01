@@ -1,14 +1,12 @@
 package com.jones.myquiz.ui.screens.login
 
-import androidx.fragment.app.viewModels
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import com.jones.myquiz.R
 import com.jones.myquiz.databinding.FragmentLoginBinding
 import com.jones.myquiz.ui.screens.base.BaseFragment
 import com.jones.myquiz.ui.screens.login.viewModel.LoginViewModelImpl
@@ -21,9 +19,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
     override val viewModel: LoginViewModelImpl by viewModels()
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
@@ -37,10 +33,8 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
             val password = binding.etPassword.text.toString().trim()
 
             if (email.isEmpty() || password.isEmpty()) {
-                // Trigger error Snackbar if fields are empty
                 showSnackbar(view, "All fields are required!", isError = true)
             } else {
-                // Proceed with login if fields are filled
                 viewModel.login(email, password)
             }
         }

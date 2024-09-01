@@ -1,22 +1,17 @@
 package com.jones.myquiz.ui.screens.base
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.Lifecycle
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.viewbinding.ViewBinding
+import com.google.android.material.snackbar.Snackbar
 import com.jones.myquiz.R
 import com.jones.myquiz.ui.screens.base.viewModel.BaseViewModel
-import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.launch
 
 abstract class BaseFragment<T:ViewBinding> : Fragment() {
@@ -56,7 +51,7 @@ abstract class BaseFragment<T:ViewBinding> : Fragment() {
     }
 
     fun showSnackbar(view: View, msg: String, isError: Boolean = false) {
-        if (view.isAttachedToWindow) { // Ensure view is attached
+        if (view.isAttachedToWindow) {
             val snackbar = Snackbar.make(view, msg, Snackbar.LENGTH_LONG)
 
             if (isError) {

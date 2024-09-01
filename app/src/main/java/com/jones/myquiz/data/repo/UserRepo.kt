@@ -1,7 +1,6 @@
 package com.jones.myquiz.data.repo
 
 import com.jones.myquiz.data.model.User
-import com.google.firebase.auth.FirebaseUser
 
 interface UserRepo {
     suspend fun addUser(user: User)

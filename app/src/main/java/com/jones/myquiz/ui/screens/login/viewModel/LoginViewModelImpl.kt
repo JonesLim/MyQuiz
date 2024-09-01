@@ -1,7 +1,6 @@
 package com.jones.myquiz.ui.screens.login.viewModel
 
 import android.util.Log
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.jones.myquiz.core.service.AuthService
 import com.jones.myquiz.data.model.User
@@ -18,10 +17,11 @@ import javax.inject.Inject
 class LoginViewModelImpl @Inject constructor(
     private val authService: AuthService,
     private val userRepo: UserRepo,
-): BaseViewModel(), LoginViewModel {
+) : BaseViewModel(), LoginViewModel {
 
 
-    private val _user = MutableStateFlow(User(name = "Unknown", email = "Unknown", role = "Unknown"))
+    private val _user =
+        MutableStateFlow(User(name = "Unknown", email = "Unknown", role = "Unknown"))
     val user: StateFlow<User> = _user
 
 
@@ -43,10 +43,9 @@ class LoginViewModelImpl @Inject constructor(
         Log.d("debugging", firebaseUser?.uid.toString())
         firebaseUser?.let {
             viewModelScope.launch(Dispatchers.IO) {
-                errorHandler { userRepo.getUser(it.uid) }?.let {  user ->
+                errorHandler { userRepo.getUser(it.uid) }?.let { user ->
                     Log.d("debugging", user.toString())
                     _user.value = user
-//                    navigateBasedOnRole(user.role)
                 }
             }
         }

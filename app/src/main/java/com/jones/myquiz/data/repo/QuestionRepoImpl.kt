@@ -4,7 +4,6 @@ import com.jones.myquiz.core.service.AuthService
 import com.jones.myquiz.data.model.Question
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
-import com.jones.myquiz.data.repo.QuestionRepo
 import kotlinx.coroutines.tasks.await
 
 class QuestionRepoImpl(

@@ -4,7 +4,6 @@ import androidx.lifecycle.viewModelScope
 import com.jones.myquiz.data.model.Score
 import com.jones.myquiz.data.repo.ScoreRepo
 import com.jones.myquiz.ui.screens.base.viewModel.BaseViewModel
-import com.jones.myquiz.ui.screens.leaderboard.viewModel.LeaderBoardViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow

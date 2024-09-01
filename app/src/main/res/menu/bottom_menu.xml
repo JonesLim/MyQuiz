@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="@string/home"
+    <item
         android:id="@+id/home"
-        android:icon="@drawable/home"/>
-    <item android:title="@string/leaderboard"
+        android:icon="@drawable/home"
+        android:title="@string/home" />
+    <item
         android:id="@+id/leaderboard"
-        android:icon="@drawable/leaderboard"/>
-    <item android:title="@string/profile"
+        android:icon="@drawable/leaderboard"
+        android:title="@string/leaderboard" />
+    <item
         android:id="@+id/profile"
-        android:icon="@drawable/user"/>
+        android:icon="@drawable/user"
+        android:title="@string/profile" />
 </menu>

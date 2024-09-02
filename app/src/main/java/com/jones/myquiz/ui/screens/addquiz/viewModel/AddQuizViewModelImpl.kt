@@ -119,7 +119,7 @@ class AddQuizViewModelImpl @Inject constructor(
                 }
                 _quizQuestion.emit(questions)
                 _timer.emit(timer)
-                _success.emit("CSV Import Successful")
+                _success.emit("CSV Imported Successful.")
                 Log.d("debugging", "CSV Import Successful: ${questions.size} questions imported.")
             } catch (e: Exception) {
                 Log.e("debugging", "Error parsing CSV file: ${e.message}")

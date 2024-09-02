@@ -224,7 +224,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:backgroundTint="@color/textColorDark"
+            android:backgroundTint="@color/mutedForestGreen"
             android:text="@string/finish" />
 
     </LinearLayout>

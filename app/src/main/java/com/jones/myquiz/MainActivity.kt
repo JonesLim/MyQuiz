@@ -24,10 +24,6 @@ class MainActivity : AppCompatActivity() {
 
         val destination = intent.getIntExtra("destination", R.id.home)
 
-        if (savedInstanceState == null) {
-            navController.navigate(destination)
-        }
-
         bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.home -> {

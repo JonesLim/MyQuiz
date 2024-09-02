@@ -1,4 +1,4 @@
-package com.jones.myquiz.ui.screens.splash
+package com.jones.myquiz.ui.splash
 
 import android.content.Intent
 import android.os.Bundle

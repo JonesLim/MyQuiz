@@ -5,7 +5,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
@@ -95,10 +94,9 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
 
                 val requestOptions = RequestOptions().circleCrop().skipMemoryCache(true)
                     .diskCacheStrategy(DiskCacheStrategy.NONE).placeholder(R.drawable.ic_profile)
-                    .error(R.drawable.ic_error)
 
                 Glide.with(requireContext()).load(uri).apply(requestOptions)
-                    .into(binding.ivProfile as ImageView)
+                    .into(binding.ivProfile)
             }
         }
 

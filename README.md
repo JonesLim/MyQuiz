@@ -65,6 +65,8 @@ The app follows the **MVVM (Model-View-ViewModel)** architectural pattern to ens
 
 The app's design follows **Material Design** guidelines for a clean and intuitive interface. The design prioritizes user-friendly navigation and responsiveness across different devices.
 
+**Figma Prototype**: https://www.figma.com/design/PMgm3uMRousE2T8c8wUhLK/Quiz-App?node-id=0-1&m=dev&t=YezlR4UOReO041sp-1
+
 ## **Setup Instructions**
 
 ### **Prerequisites**

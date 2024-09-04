@@ -13,8 +13,9 @@ This project is a **Quiz Application** where teachers can create accounts, manag
 5. [Usage Instructions](#usage-instructions)
 6. [CSV Import](#csv-import)
 7. [Screenshots](#screenshots)
+8. [Project Timeline](#project-timeline)
 9. [Project Structure](#project-structure)
-9. [Technologies Used](#technologies-used)
+10. [Technologies Used](#technologies-used)
 
 ## **Features**
 
@@ -147,6 +148,10 @@ Screenshots of the app to demonstrate the UI and functionality.
   <img src="https://github.com/user-attachments/assets/36bf9bdd-ca7d-48b0-8b12-138e89e86a27" alt="Leaderboard Screen" width="200"/>
   <img src="https://github.com/user-attachments/assets/c7704fe8-b486-4a22-a337-3975e60f3af3" alt="Profile Screen" width="200"/>
 </p>
+
+## **Project Timeline**
+
+**Trello:** https://trello.com/invite/b/66bc49a66d6ec0dba5aa1d52/ATTI5662e05826d307ac1b57da8fbc5c2941A4AC473D/quiz-app
 
 ## **Project Structure**
 
